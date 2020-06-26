@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var pool=require('./pool1')
+var pool=require('./pool')
 
 router.post('/checkadminlogin',function(req,res,next){
     console.log(req.body)

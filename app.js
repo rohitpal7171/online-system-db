@@ -8,6 +8,13 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
+var studentRouter = require('./routes/student/student');
+var mainCategoryRouter = require('./routes/student/mainCategory');
+var cllgCategoryRouter = require('./routes/student/cllgCategory');
+var courseRouter = require('./routes/student/course');
+var courseDescribeRouter = require('./routes/student/courseDescribe');
+var schoolCategoryRouter = require('./routes/student/schoolCategory');
+var razorpayRouter = require('./routes/student/razorpay')
 
 var app = express();
 
@@ -26,6 +33,13 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin',adminRouter);
+app.use('/student',studentRouter);
+app.use('/mainCategory',mainCategoryRouter);
+app.use('/cllgCategory',cllgCategoryRouter);
+app.use('/course',courseRouter);
+app.use('/courseDescribe',courseDescribeRouter);
+app.use('/schoolCategory',schoolCategoryRouter);
+app.use('/razorpay',razorpayRouter);
 
 
 // catch 404 and forward to error handler
